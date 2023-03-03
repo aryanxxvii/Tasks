@@ -1,0 +1,151 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap');
+
+body {
+  background-color: #17181f;
+  color: #eee;
+}
+
+* {
+  box-sizing: border-box;
+  font-family: "Poppins"
+}
+
+main {
+  margin: 3.5% auto;
+}
+div.taskwrap {
+
+  margin: auto;
+  padding-top: 30px;
+  max-width: 300px;
+}
+form.input-form {
+  border: 3px solid #25283a;
+  border-radius: 10px;
+  padding:5px;
+  display: flex;
+  margin-bottom: 20px;  
+  box-shadow: 0 0 10px #cecc71cb;
+}
+
+form.input-form input[type="text"] {
+  background: none;
+  color: #eee;
+  border: 0;
+  font-weight: 500;
+  font-size: 1rem;
+  padding: 0 8px;
+  width: 100%;
+}
+
+form.input-form input[type="text"]:focus {
+  border: none;
+  outline: none;
+  caret-color: #dcc755;
+
+}
+form.input-form button {
+  background-color: #dcc755;
+  border: 0;
+  font-weight: bold;
+  border-radius: 4px;
+  cursor: pointer;
+  padding: 0;
+  margin: 5px;
+  aspect-ratio: 1;
+  height: 25px;
+}
+
+form.hasFocus {
+  box-shadow: 0 0 10px #719ECE;
+}
+
+
+div.task {
+  background-color: #25283a;
+  border-radius: 10px;
+  padding: 5px 9px;
+  margin-top: 5px;
+  display: flex;
+  transition: opacity 0.1s linear;
+  transition-delay: 0.1s;
+}
+
+div.task span {
+  position: relative;
+} 
+
+div.task-name {
+  padding-top: 1.5%;
+  flex-grow: 1;
+}
+
+div.task svg {
+  padding-top: 7px;
+  height: 25px;
+  margin-right: 10px;
+  margin-left: 4px;
+  fill: #dcc755;
+}
+
+div.task.done {
+  opacity: 0.3;
+}
+
+div.task span:before {
+  content: '';     
+  display: block;
+  width: 0;
+  height: 1.5px;
+  background-color: #ddd;
+  position: absolute;
+  top: 11px;
+  transition: width .1s linear;
+}
+
+div.task.done span:before {
+  width: 101%;
+}
+
+
+h1,
+h2 {
+  margin: auto;
+  margin-bottom: 20px;
+  text-align: center;
+  max-width: 700px;
+}
+
+button.trash {
+  background: none;
+  padding-right: 0;
+  border: none;
+  cursor: pointer;
+}
+
+button.trash svg {
+  fill: #505567;
+  height: 22px;
+}
+
+form.edit-form {
+  flex-grow: 1;
+  padding-top: 4px;
+
+}
+
+form.edit-form input {
+  outline: none;
+  background: none;
+  border: none;
+  text-align: center;
+  border-radius:10px;
+  caret-color: #dcc755;
+  color: #eee;
+  font-size: 16px;
+}
+
+form.edit-form input::selection {
+  color: black;
+  background-color: #dcc755;
+}
